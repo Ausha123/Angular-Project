@@ -1,0 +1,100 @@
+.overview-student-about-main-outer {
+  width: 100%;
+  padding: 15px 10%;
+  background-color: black;
+  margin: 0;
+
+}
+
+.tab-content{
+  margin: 0;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    color: white;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #a29e9e;
+    font-size: 16px;
+
+  }
+
+  button {
+    color: white;
+    background-color: #037ef3;
+    padding: 10px 40px;
+
+    mat-icon {
+      font-size: 20px;
+    }
+  }
+
+  button:hover {
+
+    background: #232729;
+    border: none;
+  }
+
+}
+
+.right {
+  padding: 15px;
+}
+
+.image-outer {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.right-image-one {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://preview.colorlib.com/theme/solicitor/images/xhero_2.jpg.pagespeed.ic.UMhhlEdSd7.webp");
+  background-position: center;
+
+}
+
+.right-image-two {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://preview.colorlib.com/theme/solicitor/images/xhero_3.jpg.pagespeed.ic.-KklT_5Wl6.webp");
+  background-position: center;
+}
+
+::ng-deep.mat-tab-label {
+  min-width: 0 !important;
+  padding: 0 10px !important;
+  margin: 0 10px !important;
+}
+
+::ng-deep.mat-tab-label{
+  color: #ffffff;
+}
+
+::ng-deep.mat-ink-bar {
+  border: 1px solid #ffffff;
+  margin: 6px auto;
+}
+
+@media only screen and (max-width: 341px) {
+
+  .left-content {
+    h1 {
+      font-size: 2.50rem;
+    }
+  }
+
+
+}

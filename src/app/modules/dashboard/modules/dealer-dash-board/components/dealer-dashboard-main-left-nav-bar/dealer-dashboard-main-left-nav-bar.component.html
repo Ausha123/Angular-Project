@@ -1,0 +1,104 @@
+<div class="main-wrap-outer">
+  <div class="nav-wrap">
+    <div class="left-menu">
+      <div class="accordion">
+        <p class="head-text-for-nav">DAILY PROCESS</p>
+        <div class="section">
+          <input id="section-1" type="radio" name="accordion-1" value="toggle"/>
+          <div class="content-wrap-for-icon">
+            <div class="content-wrap-for-inner-left">
+              <mat-icon>groups</mat-icon>
+            </div>
+            <div class="label-wrapper">
+              <label for="section-1"><span>
+            Project Management</span></label>
+            </div>
+
+          </div>
+          <div class="content">
+            <div class="line"></div>
+            <ul class="content-list">
+              <li (click)="navigateToRoute('daily-process/project-management/project-list')">
+                <span>  &nbsp; Project List</span>
+              </li>
+              <li (click)="navigateToRoute('daily-process/project-management/ongoing')">
+                <span>  &nbsp; Ongoing Projects</span>
+              </li>
+              <li (click)="navigateToRoute('daily-process/project-management/completed-list')">
+                <span>  &nbsp; Completed Projects</span></li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <p class="head-text-for-nav">FINANCIAL DEPARTMENT</p>
+        <div class="section">
+          <input id="section-2" type="radio" name="accordion-1" value="toggle"/>
+          <div class="content-wrap-for-icon">
+            <div class="content-wrap-for-inner-left">
+              <mat-icon>help</mat-icon>
+            </div>
+            <div class="label-wrapper">
+              <label for="section-2"><span>
+            Financial Management</span></label>
+            </div>
+
+          </div>
+          <div class="content">
+            <div class="line"></div>
+            <ul class="content-list">
+              <li (click)="navigateToRoute('finance/revenue/source')">
+                <span>  &nbsp; Income Resource</span></li>
+              <li (click)="navigateToRoute('finance/expenses/list')">
+                <span>  &nbsp; Expenses List</span></li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <p class="head-text-for-nav">HUMAN RESOURCE</p>
+        <div class="section">
+          <input id="section-3" type="radio" name="accordion-1" value="toggle"/>
+          <div class="content-wrap-for-icon">
+            <div class="content-wrap-for-inner-left">
+              <mat-icon>help</mat-icon>
+            </div>
+            <div class="label-wrapper">
+              <label for="section-3"><span>
+            Clients Management</span></label>
+            </div>
+
+          </div>
+          <div class="content">
+            <div class="line"></div>
+            <ul class="content-list">
+              <li (click)="navigateToRoute('human-resource/clients/list')"><span>  &nbsp; My Clients List</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <p class="head-text-for-nav">CUSTOMER SERVICE</p>
+        <div class="section">
+          <input id="section-37" type="radio" name="accordion-1" value="toggle"/>
+          <div class="content-wrap-for-icon">
+            <div class="content-wrap-for-inner-left">
+              <mat-icon>help</mat-icon>
+            </div>
+            <div class="label-wrapper">
+              <label for="section-37"><span>
+            Help Center</span></label>
+            </div>
+
+          </div>
+          <div class="content">
+            <div class="line"></div>
+            <ul class="content-list">
+              <li><span>  &nbsp; Upload News</span></li>
+              <li><span>  &nbsp; News History</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="version-text">{{version}}</p>
+</div>

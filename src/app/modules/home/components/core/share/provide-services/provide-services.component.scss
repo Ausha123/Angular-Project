@@ -1,0 +1,82 @@
+
+
+.cards-outer {
+  padding: 5px;
+  height: 200px;
+}
+
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+
+  mat-icon {
+    color: white;
+  }
+
+
+
+  h3 {
+    text-align: center;
+    color: #242424;
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+.card {
+  height: 100%;
+
+  span {
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    padding: 10px;
+  }
+
+}
+
+.card:hover {
+  background-color: #2F89Fc;
+
+  span {
+    color: white;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  mat-icon {
+    color: white;
+  }
+
+}
+
+.carousel-outer {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: -500;
+}
+
+.main-slide-outer {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 425px) {
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 10px 0;
+  }
+}

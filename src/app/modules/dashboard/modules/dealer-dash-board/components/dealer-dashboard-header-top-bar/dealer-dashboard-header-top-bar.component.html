@@ -1,0 +1,41 @@
+<div class="main-outer">
+  <div class="left-outer outer">
+    <div class="ham-outer">
+      <button class="ham-button" (click)="slide()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div class="logo-outer" routerLink="/dashboard/dealer">
+      <h1 class="logo-name">E-Dealers</h1>
+      <p class="sub-title">Dealers Panel</p>
+    </div>
+    <div class="search-outer" *ngIf="searchVisibleState">
+      <input type="search" name="" id="" class="search" placeholder="Search here">
+    </div>
+  </div>
+  <div class="right-outer outer">
+    <div class="small-search-outer" (click)="toggleSearch()">
+      <mat-icon>{{searchVisibleVerifyState?'close':'search'}}</mat-icon>
+    </div>
+    <div class="notification-outer">
+      <mat-icon matBadge="8" matBadgeSize="small" matBadgeOverlap="true" matBadgePosition="after" matBadgeColor="accent">notifications</mat-icon>
+    </div>
+    <div class="profile-outer">
+      <div class="profile-avatar-outer">
+        <img
+          src="{{avatar}}"
+          alt="Avatar">
+      </div>
+      <div class="profile-name-outer" [matMenuTriggerFor]="topBarMenu" >
+        <span class="profile-name">{{userName}}</span>&nbsp; <mat-icon>arrow_drop_down</mat-icon>
+      </div>
+
+      <mat-menu #topBarMenu="matMenu">
+        <button mat-menu-item (click)="signOut()">
+          <span>Sign Out</span>
+        </button>
+      </mat-menu>
+
+    </div>
+  </div>
+</div>

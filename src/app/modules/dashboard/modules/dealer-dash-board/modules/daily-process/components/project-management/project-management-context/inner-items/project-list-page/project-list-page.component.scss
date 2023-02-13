@@ -1,0 +1,100 @@
+.text-input-outer {
+  padding: 30px 0;
+}
+
+
+.text-input-inner {
+  width: 50%;
+  height: 37px;
+  border: 1px solid rgba(189, 195, 199, 0.8);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  //padding: 0 20px;
+
+
+
+  input, select {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    background: none;
+  }
+
+  mat-icon {
+    margin: 1px 5px 0 0;
+    font-size: 20px;
+    padding: 2px;
+  }
+
+}
+.controller-outer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.filter-button {
+  height: 35px;
+  padding: 0 10px;
+  border: none;
+  background-color: #7f8c8d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.student-management-pending-content {
+  padding: 15px 0 0 0;
+}
+
+.table tbody {
+  tr:nth-child(odd) {
+    background-color: #E5E5E5;
+  }
+}
+
+.table tbody td h4 {
+  margin: 0;
+  color: black;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 16px;
+
+}
+
+.table {
+  //background-color: red;
+  //border: 1px solid red;
+  min-width: 768px;
+}
+
+.tbl-outer {
+  width: 100%;
+}
+
+.pending-invitations-tbl-outer {
+  padding: 0;
+}
+
+.bottom-outer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.inner-outer {
+  //border: 1px solid red;
+  min-width: inherit;
+  overflow: auto;
+}
+
+.table tbody {
+  tr {
+    text-align: center;
+  }
+}

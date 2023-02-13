@@ -1,0 +1,141 @@
+.projects-on-going-inner {
+  border: 1px solid #bdc3c7;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: 500;
+  margin: 0;
+}
+
+.point-text {
+  color: #7f8c8d;
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.projects-data-outer {
+  flex: 1;
+  overflow: auto;
+  /*
+    padding: 5px 10px 0 0;*/
+}
+
+.projects {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.projects-inner {
+  width: 100%;
+  height: auto;
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.projects-data-outer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects-data-outer::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #7f8c8d;
+}
+
+.projects-data-outer::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background-color: white;
+}
+
+.team-outer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.avatar-outer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.avatar-wrapper {
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  margin-left: -15px;
+  border: 2px solid white;
+  background-color: white;
+}
+
+.avatar-wrapper:first-child {
+  margin-left: 0 !important;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.team-name {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.name-text {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.ham {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ham-burger {
+  background: none;
+  height: 100%;
+  width: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  mat-icon {
+    color: #7f8c8d;
+  }
+}
+
+.project-details-outer {
+  flex: 1;
+}
+
+.project-name {
+  margin: 5px 0 0 0;
+}
+
+.dates {
+  margin: -5px 0 0 0;
+  color: #0d6efd;
+}
+
+.chart-outer {
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: flex-end;
+}
+mat-progress-spinner{
+}

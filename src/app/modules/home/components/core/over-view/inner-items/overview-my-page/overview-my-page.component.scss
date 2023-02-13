@@ -1,0 +1,119 @@
+.main-outer{
+  background-image: url('https://wp.dreamitsolution.net/itsoft-elementor/wp-content/uploads/2021/07/bg-svg.jpg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //border: 2px solid red;
+  padding: 65px 0px 180px 0px;
+  position: relative;
+
+}
+.title-outer{
+  display: flex;
+  flex-direction: row;
+}
+.title-left{
+  padding: 0 0 0 150px;
+  flex: 1;
+   h5{
+     color: #FFFFFF;
+     font-size: 16px;
+     text-transform: uppercase;
+     font-weight: 600;
+     letter-spacing: 1px;
+     margin: 0 0 5px;
+   }
+   h3{
+     color: #FFFFFF;
+     font-size: 35px;
+     margin-bottom: 0px;
+     text-transform: capitalize;
+     margin-top: 0;
+     line-height: 1.2;
+     font-weight: 700;
+   }
+}
+
+.title-right{
+  flex: 1;
+  padding: 0 150px 0 0;
+  p{
+    margin: 0;
+    overflow: hidden;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    //width: 50%;
+
+  }
+}
+
+.bottom{
+  margin-top: 100px;
+  height: 200px;
+  bottom: 200px;
+  position: relative;
+}
+
+.icon-outer-inner-1{
+  background-color: rgba(255,255,255,0.75);
+  background-image: url('https://wp.dreamitsolution.net/itsoft-elementor/wp-content/uploads/2020/09/case4-600x600.jpg');
+  height: 350px;
+  width: 369px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  //background: rgba(255,255,255,0.75);
+
+}
+
+.icon-outer{
+  padding: 25px;
+  //background: rgba(255,255,255,0.75);
+
+}
+
+.icon-outer-inner-1:hover {
+  background-image: url('https://wp.dreamitsolution.net/itsoft-elementor/wp-content/uploads/2020/09/case4-600x600.jpg');
+  height: 350px;
+  width: 369px;
+  opacity: 0.5;
+/*  .icon-outer-inner-3:hover{
+    position: relative;
+    width: 280px;
+    height: 100px;
+    bottom: 300px;
+    background-color: orangered;
+    z-index:3;
+  }*/
+}
+
+
+
+.icon-outer-inner-2{
+  position: relative;
+  background-color: #FFFFFF;
+  height: 200px;
+  width: 280px;
+  z-index: -3;
+  bottom: 350px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .title-left,.title-right{
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .title-outer{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 417px) {
+  .icon-outer-inner-2{
+    width: 369px;
+  }
+}

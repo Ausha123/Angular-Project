@@ -1,0 +1,128 @@
+.introduction-main-outer{
+  margin: 25px 0;
+  padding: 20px 4%;
+  background-color: #ecf0f1;
+}
+
+.left{
+  padding: 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1{
+    color: #1D2B36;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  h2{
+    color: #636363;
+    margin-top: 20px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.avatar-outer{
+  width: 60px;
+  height: 60px;
+  //border: 2px solid #f60;
+  border-radius: 100%;
+}
+.avatar-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.details-outer{
+  flex: 1;
+  padding: 0 10px;
+  .name-text{
+    color: #1D2B36;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .occupation-text{
+    color: #1D2B36;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: -5px 0 0 0;
+  }
+
+}
+.button-group{
+  display: flex;
+  justify-content: right;
+  padding: 15px 0;
+}
+
+.back{
+  border: 1px solid rgba(161, 161, 161, 0.7);
+  text-align: center;
+  color: #f60;
+}
+
+.forward{
+  border: 1px solid rgba(161, 161, 161, 0.7);
+  text-align: center;
+  background: #f60;
+  color: white;
+}
+
+.right{
+  padding-left: 50px;
+  min-height: 350px;
+}
+
+.video-outer{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.intro-video{
+  width: 100%;
+  height: 400px;
+}
+
+@media only screen and (max-width: 1055px) {
+  .video-outer{
+    height: 400px;
+  }
+  .intro-video{
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .right{
+    margin: 25px 0;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .video-outer{
+    height: 200px;
+  }
+  .intro-video{
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 320px) {
+ .right{
+   min-height: 168px;
+ }
+}

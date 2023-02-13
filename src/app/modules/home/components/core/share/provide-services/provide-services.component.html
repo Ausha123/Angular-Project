@@ -1,0 +1,19 @@
+  <div class="carousel-outer" data-aos="slide-up" data-aos-duration='2000' data-aos-once="true">
+    <owl-carousel [carouselClasses]="['owl-theme', 'sliding']" [options]="myCarouselOptions">
+      <div *ngFor="let items of servicesWeProvide; let i = index" class="main-slide-outer">
+        <div class="main-slide-inner">
+          <div class="cards-outer">
+            <div class="card">
+              <span>{{items.count}}</span>
+              <div class="card-content">
+                <h3>{{items.title}}</h3>
+                <mat-icon>arrow_right_alt</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+
+

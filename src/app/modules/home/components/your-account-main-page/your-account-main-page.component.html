@@ -1,0 +1,48 @@
+<div class="top-wrapper"></div>
+<div class="main-outer container">
+  <h1 class="title">
+    Account Settings!
+  </h1>
+  <h4 class="intro">
+    Manage your E-Dealers Experience
+  </h4>
+  <hr>
+
+  <div class="outer row">
+    <div class="col-12 col-md-6 inner-outer">
+      <div class="inner" (click)="navigateToConfigure('/home/my-account/manage/personal-details')">
+        <div class="top">
+          <div class="icon-outer">
+            <mat-icon>manage_accounts</mat-icon>
+          </div>
+          <div class="title-outer">
+            <h2 class="type-text">
+              Personal Information
+            </h2>
+            <h5 class="short-desc">
+              Update your personal information.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="col-12 col-md-6 inner-outer">
+          <div class="inner" (click)="navigateToConfigure('/home/my-account/manage/security')">
+            <div class="top">
+              <div class="icon-outer">
+                <mat-icon>lock_reset</mat-icon>
+              </div>
+              <div class="title-outer">
+                <h2 class="type-text">
+                  Security
+                </h2>
+                <h5 class="short-desc">
+                  Manage your password and configure security settings.
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+
+</div>

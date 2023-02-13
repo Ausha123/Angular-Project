@@ -1,0 +1,77 @@
+.main-slider-main-outer {
+  height: calc(100vh);
+  padding-top: 30vh;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://edealers.s3.ap-south-1.amazonaws.com/main-page-slider-image.jpg") no-repeat fixed center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  position: relative;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    line-height: 0.7;
+
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 100;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 1201px) {
+  .main-slider-main-outer {
+    height: auto;
+    padding-bottom: 75px;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .content {
+
+    h1 {
+      line-height: 0.9;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .content {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.input-outer {
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  padding: 20px 10px 0 10px;
+  border-radius: 5px;
+  margin: 0;
+  justify-content: center;
+}
+
+.mat-form-field-outer {
+  padding: 10px 5px;
+}
+
+.button-outer {
+  display: flex;
+  align-items: center;
+  padding: 0 5px 20px 0;
+
+  button {
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+
+.mat-form-field-full-width {
+  width: 100%;
+}
+
+.application-type {
+  ul{
+    list-style: none;
+    padding: 10px 0;
+
+    li{
+      display: inline-block;
+      padding: 5px 10px;
+      color: black;
+      background: rgba(231, 231, 231, 0.3);
+      border: 2px solid rgba(127, 140, 141,1.0);
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    li:nth-child(1){
+      display: inline-block;
+      color: black;
+      background: transparent;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      margin: 0 10px 0 0;
+      padding: 5px 0;
+    }
+
+    li:hover{
+      background: rgba(231, 231, 231, 0.8);
+      color: black;
+      cursor: pointer;
+    }
+
+    li:nth-child(1):hover{
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: default;
+
+    }
+  }
+}
+
+
+/*:host ::ng-deep .iti {
+  width: 100%;
+  background-color: red;
+  height: 55px;
+  margin-top: -20px;
+}*/
+:host ::ng-deep .iti__flag-container {
+  height: 52px;
+  margin-top: -8px;
+}
+:host ::ng-deep .form-control {
+  width: 100%!important;
+  border: 1px solid #E0E0E0;
+  height: 52px;
+  margin-top: -20px;
+  position: absolute;
+  top: -9px;
+}
+:host ::ng-deep .iti {
+  width: 100%!important;
+}
+:host ::ng-deep .form-control:focus{
+  outline: none;
+}
+:host ::ng-deep .form-control:hover{
+  border: 2px solid #8A8A8A;
+}
+
+.activated{
+  background: #4586FF!important;
+  color: white!important;
+}
+
+
+.title{
+  color: #d35400;
+}
+
+@media only screen and (max-width: 454px) {
+  ul{
+    list-style: none;
+    padding: 10px 0;
+
+    li:nth-child(1){
+      display: block!important;
+    }
+    li:nth-child(2){
+      margin: 0 5px 0 0!important;
+    }
+  }
+}

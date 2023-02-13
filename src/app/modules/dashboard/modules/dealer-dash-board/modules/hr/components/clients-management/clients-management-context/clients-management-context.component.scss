@@ -1,0 +1,67 @@
+
+.context-header {
+  display: flex;
+  padding-top: 20px;
+}
+
+.main-outer {
+  padding: 0 20px;
+}
+
+.left-outer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  button {
+    border: none;
+    background: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    color: #D35400;
+    padding-left: 5px;
+    margin: 0;
+  }
+}
+
+.mat-arrow-icon {
+  color: #367BF5;
+}
+
+.bottom-outer {
+  height: 50px;
+  width: 100%;
+}
+
+
+.mat-tab-link {
+  color: black;
+}
+
+.active-route {
+  background-color: #34495E;
+  color: white;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.button-outer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.new-client-button{
+  padding: 5px 8px;
+  background-color:#34495E;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+.new-client-button:hover{
+  -webkit-box-shadow: 3px 3px 15px -5px #000000;
+  box-shadow: 3px 3px 15px -5px #000000;
+}

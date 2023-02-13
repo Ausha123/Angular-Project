@@ -1,0 +1,51 @@
+.main-outer{
+  padding: 20px 0;
+}
+.table tbody {
+  tr:nth-child(odd) {
+    background-color: #E5E5E5;
+  }
+}
+
+.table tbody td h4 {
+  margin: 0;
+  color: black;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 16px;
+
+}
+
+.table {
+  //background-color: red;
+  //border: 1px solid red;
+  min-width: 768px;
+}
+
+.tbl-outer {
+  width: 100%;
+}
+
+.pending-invitations-tbl-outer {
+  padding: 0;
+}
+
+.bottom-outer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.inner-outer {
+  //border: 1px solid red;
+  min-width: inherit;
+  overflow: auto;
+}
+
+.table tbody {
+  tr {
+    text-align: center;
+  }
+}

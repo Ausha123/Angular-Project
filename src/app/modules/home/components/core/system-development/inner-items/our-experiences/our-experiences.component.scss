@@ -1,0 +1,84 @@
+.main-outer {
+  padding: 50px 0 0 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.main-outer-row {
+  margin: 0;
+}
+
+.row-col-1 {
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.experience-text {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: justify;
+  padding: 8px;
+}
+
+.background-outer {
+  background-color: #ff9900;
+  padding: 15px 0 15px 25px;
+
+  h1 {
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.row-col-2 {
+  padding: 0 40px 0 40px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  p {
+    line-height: 30px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    text-align: justify;
+  }
+}
+
+.row-col-3 {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .background-outer {
+    padding: 15px 0 15px 0;
+
+    h1 {
+      text-align: center;
+    }
+
+    margin: 0 0 40px 0;
+  }
+  .row-col-2 {
+    padding: 0 40px 30px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row-col-3 {
+    padding: 0 40px 0 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .row-col-3 {
+    padding: 0;
+  }
+}

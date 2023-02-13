@@ -1,0 +1,151 @@
+.main-outer {
+  padding: 20px 50px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+.left {
+  min-height: 632px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/seekerscloud-official-website.appspot.com/o/e-dealers%2Fwhat-do-we-do%2Fdev%201.jpg?alt=media&token=5f17d48a-ad86-49b2-a6d7-cd1460e7aecc');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 18px solid white;
+}
+
+.marketing {
+  text-align: center;
+  border: 10px solid transparent;
+
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.25rem;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 1rem;
+    font-style: normal;
+    margin: 17px 0 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+  }
+
+}
+
+.icon {
+  height: 20px;
+  padding: 50px 10px 10px;;
+}
+
+.button {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  align-self: center;
+  margin: 35px 0 0 0;
+  padding: 5px 12px;
+  color: #0d6efd;
+  border: 1px solid #0d6efd;
+}
+.button:hover{
+  background-color: #0d6efd;
+  color: white;
+}
+
+.img-1 {
+  min-height: 309px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/seekerscloud-official-website.appspot.com/o/e-dealers%2Fwhat-do-we-do%2Fdev%202.jpg?alt=media&token=99b83b87-a7cc-4cc9-94e3-170cf91dbae4');
+  border: 10px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-2 {
+  min-height: 323px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/seekerscloud-official-website.appspot.com/o/e-dealers%2Fwhat-do-we-do%2Fdev%203.jpg?alt=media&token=db6e8439-1537-4123-b5df-c68d16594047');
+  margin-top: 15px;
+  border: 10px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right {
+  border: 10px solid white;
+  //display: flex;
+  //flex-direction: column;
+  //align-content: center;
+  //justify-items: center;
+}
+
+.list {
+  background-color: #7382f0;
+  //margin-top: 15px;
+  margin: 15px 0 0 0;
+  border: 10px solid white;
+  align-items: flex-start;
+
+
+  ul {
+
+    //padding: 50px 0 0 0;
+
+    li {
+
+      list-style: none;
+      font-size: 1.25rem;
+      line-height: 2;
+      color: #ffffff;
+    }
+  }
+}
+
+.list-inner {
+  padding-top: 50px;
+}
+/*
+
+@media only screen and (max-width: 576px) {
+  .list {
+    height: 323px;
+  }
+}
+*/
+
+@media only screen and (max-width: 575px) {
+   .img-1,.img-2,.list,.marketing{
+     border: none;
+   }
+   .left{
+     border: none;
+   }
+  .marketing{
+    margin: 15px 0 15px 0;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 575px){
+  .left{
+    border: 20px solid white;
+  }
+}
+
+
+@media only screen and (max-width: 370px){
+  .list-inner{
+    padding-top: 50px;
+    min-height: 323px;
+    ul{
+      padding: 0;
+      li{
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+
+  }
+}

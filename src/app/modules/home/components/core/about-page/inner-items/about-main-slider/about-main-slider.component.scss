@@ -1,0 +1,87 @@
+.service-main-slider-main-outer {
+  padding: 50px 25px 0 25px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/seekerscloud-official-website.appspot.com/o/e-dealers%2Fabout%2Fabout-main-slider.jpg?alt=media&token=033368d7-f9c5-40d5-a41d-85b88b82e58d");
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.center-content {
+  text-align: center;
+  transition-duration: .8s;
+
+  h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition-property: opacity, transform;
+    font-family: "Montserrat", sans-serif;
+    max-width: 730px;
+  }
+
+  .sub-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #e1e1e1;
+      max-width: 480px;
+    }
+  }
+
+}
+
+.button-group{
+  width: 100%;
+  padding: 10px;
+}
+
+.button-one{
+  margin: 5px 15px;
+  background: white;
+  padding: 0 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  border: none;
+}
+
+.button-one:hover{
+  background: #0e49b5;
+  color: white;
+}
+
+.button-two{
+  margin: 5px 15px;
+  background: none;
+  border: none;
+  padding: 1px 39px;
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+}
+
+.button-two:hover{
+  background: #0e49b5;
+}
+@media only screen and (max-width: 568px) {
+  .service-main-slider-main-outer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}

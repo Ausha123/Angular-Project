@@ -1,0 +1,48 @@
+<div class="server-cost-outer">
+  <div class="data-top-outer">
+    <h4 class="title">
+      SERVER COST & OTHER EXPENSES
+    </h4>
+    <!--<p class="point-text">
+      Projects where Development work is on completion
+    </p>-->
+  </div>
+  <div class="data-outer">
+    <div class="chart-outer">
+      <div class="selector-button-outer">
+        <button (click)="updateOptions( '1m' )"
+                [class.active]="activeOptionButton=='1m'"
+                mat-raised-button
+        >
+          1M
+        </button>
+        <button (click)="updateOptions( '6m' )"
+                [class.active]="activeOptionButton=='6m'"
+                mat-raised-button
+        >
+          6M
+        </button>
+        <button (click)="updateOptions( '1y' )"
+                [class.active]="activeOptionButton=='1y'"
+                mat-raised-button
+        >
+          1Y
+        </button>
+      </div>
+      <apx-chart
+        #chart
+        [annotations]="chartOptions.annotations"
+        [chart]="chartOptions.chart"
+        [colors]="chartOptions?.colors"
+        [dataLabels]="chartOptions.dataLabels"
+        [markers]="chartOptions.markers"
+        [series]="chartOptions.series"
+        [stroke]="chartOptions.stroke"
+        [tooltip]="chartOptions.tooltip"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+
+      ></apx-chart>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.knowledge-center-faq{
+  margin-top: 50px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.faq-cards-outer{
+  margin: 0;
+}
+
+.faq-card {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-bottom: 50px;
+}
+
+.card-content-outer {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  background-color: #ffff;
+  padding: 20px;
+}
+
+.question-heading {
+  display: flex;
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    flex: 10;
+  }
+
+}
+
+.button {
+  flex: 1;
+
+  padding: 0;
+
+  .icon-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mat-icon {
+      font-size: 23px;
+      color: rgba(189, 195, 199,1.0);
+    }
+  }
+}
+
+.question-body {
+
+}
+
+

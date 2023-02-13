@@ -1,0 +1,116 @@
+<div class="main-header-outer">
+  <div (click)="manageNavBar()" class="ham-outer">
+    <mat-icon class="menu-icon">menu</mat-icon>
+  </div>
+  <div class="logo-outer" routerLink="/">
+    <img alt="" class="logo" src="../../../../../assets/logo/logo%20white.png">
+  </div>
+  <div class="nav-outer">
+    <ul class="menu-outer">
+      <li routerLink="/home/main" routerLinkActive="active-link">Home</li>
+      <li routerLink="/home/service" routerLinkActive="active-link">Services</li>
+      <li routerLink="/home/about" routerLinkActive="active-link">About</li>
+      <li routerLink="/home/overview" routerLinkActive="active-link">Overview</li>
+      <li routerLink="/home/contact" routerLinkActive="active-link">Contact</li>
+      <li routerLink="/home/register" routerLinkActive="active-link">Register</li>
+      <li [matMenuTriggerFor]="menu" routerLinkActive="active-link">Account</li>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+    </ul>
+    <div class="access-dashboard-outer">
+      <button class="tracking-button" routerLink="/dashboard">
+        <span class="tracking-text">Access Console</span>
+        <span class="tracking-icon">
+          <mat-icon>view_kanban</mat-icon>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="navSliderState" [@navSlider] class="main-nav-slider">
+  <div class="main-nav-slider-inner">
+    <div class="logo-outer-1">
+      <a routerLink="/"><img alt="logo" class="img-fluid" src="../../../../../assets/logo/logo%20white.png"></a>
+      <button class="nav-button" (click)="manageNavBar()">
+        <mat-icon class="back-arrow">arrow_back</mat-icon>
+      </button>
+    </div>
+    <hr>
+    <div class="content-outer">
+      <div class="inner-content-header-outer">
+        <h2 class="type-text">Members area</h2>
+        <div class="line-bar"></div>
+        <div class="dot"></div>
+      </div>
+      <br>
+      <ul class="nav-list">
+        <li (click)="manageNavBar()" routerLink="/home/main" routerLinkActive="activated-route">
+          Home
+        </li>
+        <li (click)="manageNavBar()" routerLink="/home/service" routerLinkActive="activated-route">
+          Services
+        </li>
+        <li (click)="manageNavBar()" routerLink="/home/about" routerLinkActive="activated-route">
+          About
+        </li>
+        <li (click)="manageNavBar()" routerLink="/home/overview" routerLinkActive="activated-route">
+          Overview
+        </li>
+        <li (click)="manageNavBar()" routerLink="/home/contact" routerLinkActive="activated-route">Contact</li>
+      </ul>
+    </div>
+    <br>
+    <div class="content-outer">
+      <div class="inner-content-header-outer">
+        <h2 class="type-text">General Services</h2>
+        <div class="line-bar"></div>
+        <div class="dot"></div>
+      </div>
+      <br>
+      <ul class="nav-list">
+        <li (click)="manageNavBar()" routerLink="/home/system-development" routerLinkActive="activated-route">System Development</li>
+        <li (click)="manageNavBar()" routerLink="/home/make-money-with-us" routerLinkActive="activated-route">Make Money With Us</li>
+        <li (click)="manageNavBar()" routerLink="/home/knowledge-center" routerLinkActive="activated-route">Knowledge Center</li>
+        <li (click)="manageNavBar()" routerLink="/home/what-do-we-do" routerLinkActive="activated-route">What Do we Do?</li>
+      </ul>
+    </div>
+    <br>
+    <div class="content-outer">
+      <div class="inner-content-header-outer">
+        <h2 class="type-text">Help & Settings</h2>
+        <div class="line-bar"></div>
+        <div class="dot"></div>
+      </div>
+      <br>
+      <ul class="nav-list">
+        <li (click)="manageNavBar()" routerLink="/home/my-account" routerLinkActive="activated-route">
+          <mat-icon>manage_accounts</mat-icon>&nbsp;
+          Your Account
+        </li>
+      </ul>
+
+    </div>
+    <br>
+    <div class="from-seekers-cloud-wrapper">
+      <h4 class="from-text">
+        From
+      </h4>
+      <h5 class="company-name-text">
+        Seekers Cloud
+      </h5>
+    </div>
+  </div>
+</div>

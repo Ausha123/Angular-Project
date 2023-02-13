@@ -1,0 +1,126 @@
+.main-outer{
+  padding: 5%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.hw-do-we-process{
+  font-size: 13px!important;
+  color: rgba(127, 140, 141,1.0);
+}
+
+.text{
+  h3{
+    font-size: 3.75rem;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    line-height: 1.1;
+    font-weight: 400;
+    position: relative;
+
+  }
+  .hw-do-we-process-title{
+    padding-bottom: 20px;
+  }
+  p{
+    text-align: justify;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+  }
+  button{
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+    align-self: center;
+    background-image: none;
+    border-style: none;
+    text-align: center;
+    font-weight: 700;
+    margin: 31px auto 0 0;
+    padding: 20px 47px 20px 46px;
+    color: #ffffff;
+    background-color: #e64233 ;
+  }
+  button:hover{
+    color: #ffffff !important;
+    background-color: black;
+  }
+}
+
+.image-3{
+  min-height: 500px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/seekerscloud-official-website.appspot.com/o/e-dealers%2Foverview%2FProceed.jpg?alt=media&token=504845c0-f85c-44c7-852a-b9db366eb4d8');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 25px;
+}
+
+
+.image{
+  background-color: #e64233;
+  margin-left: 25px;
+  border: 15px solid white;
+
+
+}
+@media only screen and (max-width: 576px) {
+
+  .image-1 {
+    height: 200px;
+    margin: 0 0 30px 0;
+
+  }
+  .image-2{
+    border: none;
+  }
+
+  .image{
+    height: 250px;
+    margin: 30px 0 0 0;
+    border: 13px solid white;
+
+  }
+  .image-2{
+    margin: 30px 0 0 0;
+    border: 13px solid white;
+  }
+  .image-3{
+    margin: 30px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+   .image-3{
+     margin-right: 0!important;
+   }
+}
+@media only screen and (max-width: 1196px) {
+   .image-3{
+     height: 600px;
+   }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .text {
+    h3 {
+      font-size:1.89rem;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      line-height: 1.1;
+      font-weight: 400;
+      position: relative;
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .text {
+    h3 {
+      font-size:1.89rem;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      line-height: 1.1;
+      font-weight: 400;
+      position: relative;
+    }
+  }
+}

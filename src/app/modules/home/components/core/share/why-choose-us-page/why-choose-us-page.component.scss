@@ -1,0 +1,145 @@
+
+.main-outer {
+  padding: 50px 100px 0 100px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header {
+
+  h2 {
+    font-family: "Playfair Display", sans-sarif;
+    font-size: 2rem;
+  }
+}
+
+.number {
+  //border: 1px solid green;
+  flex: 0 0 60px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #d79100;
+  display: inline-block;
+  border-radius: 50%;
+  color: white;
+}
+
+
+.text-inner {
+  //border: 1px solid red;
+  //margin-left: 50px;
+  h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #242f3a;
+    margin: 0;
+  }
+
+  p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+
+.text {
+  display: flex;
+  //border: 1px solid pink;
+  background-color: #fff;
+  padding: 50px 0 0 50px;
+}
+
+.right {
+  margin-top: 3%;
+  padding-right: 50px;
+}
+
+.right-inner {
+  height: 500px;
+  overflow: auto;
+  margin-left: -100px;
+}
+
+@media only screen and (max-width: 1318px) {
+  .right {
+    margin-top: 0;
+  }
+}
+
+.title {
+  padding: 0 20px;
+  display: none;
+  font-weight: 500;
+  color: #ff6600;
+}
+
+@media only screen and (max-width: 991px) {
+  .image {
+    display: none;
+  }
+  .title {
+    display: block;
+  }
+  @media only screen and (max-width: 992px) {
+    .text {
+      margin-left: 0;
+      padding: 50px 0 0 12px;
+    }
+    .main-outer {
+      padding: 50px 20px 0 20px;
+    }
+    .header {
+      padding-top: 50px;
+      text-align: center;
+    }
+    .right-inner {
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .paragraph {
+      left: -14%;
+      position: relative;
+      /* text-align: left; */
+      /* padding-top: 30px; */
+      padding: 30px 10px 0 10px;
+    }
+
+    .right {
+      padding: 0;
+    }
+    .text-inner {
+      margin: 14px 0 0 7px;
+    }
+    .number {
+      margin-right: 0;
+    }
+  }
+}
+
+
+/*@media only screen and (max-width: 330px) {
+  .paragraph{
+    //left: -30%;
+    //position: relative;
+    //width: 155%;
+    padding-top: 30px;
+  }
+
+}*/

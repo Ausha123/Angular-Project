@@ -1,0 +1,108 @@
+.main-wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.side-one{
+  display: flex;
+  align-items: center;
+}
+.side-two{
+  flex: 1;
+  background-image: url("https://img.freepik.com/free-photo/smiling-young-woman-uses-laptop-earning-money-internet-charming-brunette-works-online-sits-with-crossed-legs-floor-lady-wears-casual-white-sweater-jeans-comfortable-maroon-boots_176532-6403.jpg?t=st=1652862727~exp=1652863327~hmac=71953d6d3701cdc12b4136aa9fa61438e7cad06d302db77d291bd72e8d93013d&w=740");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inner {
+  width: 100%;
+  min-height: 80vh;
+  height: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.form{
+/*  background: url("https://pro2-bar-s3-cdn-cf2.myportfolio.com/824a8a6b-6737-4c17-a6d5-baa96d97d160/346f976a-5f07-473e-b188-a602ef9e824a_car_202x158.jpg?h=66f45cc3ae15673b5837e67f85bda2b9");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+}
+.inner-outer {
+  width: 400px;
+  height: auto;
+  /*-webkit-box-shadow: 3px 4px 12px -4px #000000;
+  box-shadow: 3px 4px 12px -4px #000000;*/
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 10px 0;
+}
+
+.desc {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #95a5a6;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.forget-password-text {
+  text-align: right;
+  font-size: 13px;
+}
+
+.agree-text {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.separator-outer {
+  display: flex;
+  align-items: center;
+}
+
+.line-outer {
+  flex: 1;
+  background-color: #7f8c8d;
+}
+
+.separator-text-outer {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  p{
+    margin: 0;
+  }
+}
+.line-bar{
+  flex: 1;
+  height: 1px;
+  background-color: #7f8c8d;
+}
+@media only screen and (max-width: 899px) {
+  .side-two {
+   display: none;
+  }
+  .side-one{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 461px) {
+  .inner-outer {
+    width: 300px;
+  }
+}

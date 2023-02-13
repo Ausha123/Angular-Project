@@ -1,0 +1,258 @@
+.service-main-slider-main-outer {
+  padding: 50px 25px 0 25px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/seekerscloud-official-website.appspot.com/o/e-dealers%2Fwhat-do-we-do%2Fwhat-do-we-do-banner.jpg?alt=media&token=7dd44e34-34ce-454f-90b9-c0f17a54d62a") no-repeat center;
+  height: 70vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.center-content {
+  text-align: center;
+  transition-duration: .8s;
+
+  h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition-property: opacity, transform;
+    font-family: "Montserrat", sans-serif;
+    max-width: 730px;
+  }
+
+  .sub-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #e1e1e1;
+      max-width: 480px;
+    }
+  }
+
+}
+
+.button-group {
+  width: 100%;
+  padding: 10px;
+}
+
+.button-one {
+  margin: 5px 15px;
+  background: white;
+  padding: 0 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  border: none;
+}
+
+.button-one:hover {
+  background: #0e49b5;
+  color: white;
+}
+
+.button-two {
+  margin: 5px 15px;
+  background: none;
+  border: none;
+  padding: 1px 39px;
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+}
+
+.button-two:hover {
+  background: #0e49b5;
+}
+
+@media only screen and (max-width: 568px) {
+  .service-main-slider-main-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+/*
+.main-outer {
+  padding: 30vh  0 0 10px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://preview.colorlib.com/theme/express/images/xhero_1.jpg.pagespeed.ic.rncIyBXo0H.webp");
+  background-position: center;
+  min-height: 950px;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 300px;
+}
+
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-content {
+  text-align: center;
+
+  h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition-property: opacity, transform;
+    font-family: "Montserrat", sans-serif;
+    max-width: 730px;
+  }
+
+  .sub-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 480px;
+    }
+  }
+
+}
+
+.button-group {
+  width: 100%;
+  padding: 10px;
+}
+
+.button-one {
+  margin: 5px 15px;
+  background: white;
+  padding: 0 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+}
+
+.button-one:hover {
+  background: #0e49b5;
+  color: white;
+}
+
+.button-two {
+  margin: 5px 15px;
+  background: none;
+  border: none;
+  padding: 0 20px;
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+}
+
+.button-two:hover {
+  background: #0e49b5;
+}
+
+
+.icon {
+  font-size: 48px;
+  color: #0e49b5;
+}
+
+.inner {
+  padding: 50px 10px 10px;
+
+  h5 {
+    font-weight: 700;
+    margin: -48px auto 0 60px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-family: Montserrat, sans-serif !important;
+  }
+
+  p {
+    margin: 32px auto 0 60px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+
+}
+
+
+
+
+.outer{
+  padding: 50px 0 10px 150px;
+  margin: 0;
+  position: relative;
+  bottom: -300px;
+}
+.one{
+  width: 450px;
+}
+.inner{
+  background-color: #FFFFFF;
+}
+
+
+.one-1{
+  box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 20%);
+  width: 450px;
+
+
+}
+
+@media only screen and (max-width: 1062px) {
+  .outer{
+    padding: 50px 0 10px 50px;
+  }
+}
+
+
+@media only screen and (max-width: 960px) {
+  .one,.one-1{
+   width: 400px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .one,.one-1{
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 773px) {
+  .outer{
+    padding: 0 50px 0 50px;
+  }
+}
+
+@media only screen and (max-width: 334px) {
+  .outer{
+    padding: 0 ;
+  }
+}
+*/

@@ -1,0 +1,28 @@
+<div class="provided-applications-main-outer" data-aos="slide-up" data-aos-duration="2000"  data-aos-once="true" >
+
+  <div class="carousel-outer">
+    <owl-carousel [carouselClasses]="['owl-theme', 'sliding']" [options]="myCarouselOptions">
+      <div *ngFor="let items of dataSet; let i = index">
+        <div class="types-container">
+          <div class="ap-type-outer">
+            <div class="type"> <!--(click)="navigateToUrl(items?.link)"-->
+            <span class="icon">
+              <mat-icon>{{items?.icon}}</mat-icon>
+            </span>
+              <h3>{{items?.title}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+
+  <div class="button-outer">
+    <a class="button-inner" (click)="openYoutube()">
+      <span class="button-icon">
+        <mat-icon>play_arrow</mat-icon>
+      </span>Learn more
+    </a>
+  </div>
+
+</div>

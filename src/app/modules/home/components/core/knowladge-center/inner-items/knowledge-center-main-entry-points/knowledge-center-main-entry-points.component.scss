@@ -1,0 +1,76 @@
+.knowledge-center-main-entry-points-main-outer {
+  padding: 25px 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.card {
+  padding: 20px 30px;
+  border: none;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.card-content {
+  padding: 20px;
+  height: 100%;
+  border-radius: 6px;
+  background-color: #ffff;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%)
+}
+.image-outer {
+  display: flex;
+  justify-content: center;
+  mat-icon{
+    color: rgba(189, 195, 199,1.0);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+  }
+}
+
+.text {
+
+  h2 {
+    color: #1D2B36;
+  }
+
+  h2:hover {
+    color: rgb(60, 126, 253);
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+
+  .card-content {
+    text-align: center;
+  }
+
+  .image-outer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.test1 {
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+}
+
+.test2 {
+
+  h1 {
+    //font-size: 20px;
+  }
+
+}

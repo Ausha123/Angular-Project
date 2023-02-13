@@ -1,0 +1,74 @@
+<div class="main-outer">
+  <div class="text-input-outer">
+
+    <form [formGroup]="searchForm">
+      <div class="controller-outer">
+        <div class="text-input-inner">
+          <mat-icon> search</mat-icon>
+          <input formControlName="searchText" type="text" placeholder="Search here">
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <div class="pending-invitations-tbl-outer">
+    <app-main-loading-bar *ngIf="loadingService.mainBarLoading | async"></app-main-loading-bar>
+    <div class="tbl-outer">
+      <div class="inner-outer">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <td><h4>#</h4></td>
+            <td><h4>Expenses Type</h4></td>
+            <td><h4>Occurred Date</h4></td>
+            <td><h4>Paid Date</h4></td>
+            <td><h4>Cost (USD)</h4></td>
+            <td><h4>State</h4></td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let tempData of myClientsList; index as counter">
+            <td>
+              <p class="data-wrapper">
+                {{counter + 1}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.email}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.name}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.contact}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.country}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.program_type}}
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <mat-paginator [length]=dataCount
+                 [pageSize]=pageSize
+                 [pageIndex]=page
+                 [pageSizeOptions]=pageSizeOptions
+                 (page)="pageEvent = getServerData($event)"
+                 aria-label="Select page">
+  </mat-paginator>
+</div>

@@ -1,0 +1,120 @@
+.main-outer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.col-A{
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  justify-content: end;
+  animation-name: example;
+  animation-duration: 4s;
+  padding: 0 50px 0 0;
+  //left: -800px;
+  .text-container{
+    width: 80%;
+    padding: 50px 10px 50px 10px;
+    box-shadow: 0 0 40px 0 rgb(64 64 64 / 25%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .text{
+    font-style: italic;
+    line-height: 1.7;
+    font-size: 18px;
+    color: #808080 !important;
+  }
+
+  .logo{
+    width: 60px;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    //left: 21%;
+    //top: 9%;
+    z-index: -3;
+    //padding: 20px 0 0 30px;
+  }
+  .logo-img{
+    width: 100px;
+    height: 100px;
+    z-index: -3;
+
+  }
+}
+
+/*
+@keyframes example {
+  0%   {background-color:white; left:-800px; top:0px;}
+  100%  {background-color:white; left:0px; top:0px;}
+}
+*/
+
+.col-B{
+  display: flex;
+  //justify-content: start;
+  text-align: left;
+  padding: 0 0 0 50px;
+
+  .text-container{
+    width: 80%;
+    padding: 30px 0 30px 0;
+  }
+  .img2{
+    width: 119px;
+    margin-bottom: 20px;
+  }
+  .header{
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.1;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    width: 100%;
+  }
+  .text{
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: 'Open Sans',sans-serif;
+    color: #212121 !important;
+  }
+}
+@media all and (max-width: 1000px) and (min-width: 0px){
+  .col-A{
+    padding: 0;
+    justify-content: center;
+    .text-container{
+      width: 90%;
+    }
+    .logo{
+      width: 60px;
+      height: 50px;
+      margin: 0;
+      position: absolute;
+      //left: 6%;
+      //left: 26%;
+      //top: 11%;
+      z-index: -3;
+    }
+  }
+  .col-B{
+    padding: 0;
+    justify-content: center;
+    .text-container{
+      width: 90%;
+    }
+  }
+}
+
+@media all and (max-width: 420px){
+  .col-B{
+    .header{
+      font-size: 2.0rem;
+    }
+  }
+  }

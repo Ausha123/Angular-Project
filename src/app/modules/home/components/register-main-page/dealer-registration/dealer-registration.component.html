@@ -1,0 +1,199 @@
+<app-main-loading-spinner *ngIf="loadingService.mainSpinnerLoading | async"></app-main-loading-spinner>
+<form [formGroup]="dealerForm" #FormDirective="ngForm" (ngSubmit)="registerDealer()">
+  <div class="top-wrapper"></div>
+  <div class="main-outer">
+    <h2 class="title">
+      Dealer Registration
+    </h2>
+    <hr>
+    <div class="context-outer">
+      <h4 class="inner-title">Basic Information</h4>
+      <div class="row" style="margin-top:10px;">
+        <div class="col-12 col-md-6 col-lg-4 outer">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Fill Name</mat-label>
+            <input formControlName="fullName" type="text" matInput placeholder="Ex. Jone Doe">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 outer">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>NIC/Passport</mat-label>
+            <input formControlName="nic" type="text" matInput placeholder="Ex. +94 745852">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 outer">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-12 outer">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Little About You</mat-label>
+            <textarea formControlName="littleAbout" matInput rows="5"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="context-outer">
+      <h4 class="inner-title">Contact Details</h4>
+
+      <div class="row" style="margin-top:10px;">
+        <div class="col-12 col-sm-9 col-md-6 col-lg-4 outer">
+          <form [formGroup]="contactEmailForm" #contactFormDirective="ngForm">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Contact Emails</mat-label>
+              <input formControlName="email" (keyup.enter)="addEmail()" type="email" matInput
+                     placeholder="Ex. example@gmail.com">
+              <mat-icon matSuffix (click)="addEmail()">add_circle</mat-icon>
+            </mat-form-field>
+          </form>
+        </div>
+        <div class="col-12 outer" *ngIf="emailsArray.length>0">
+          <table class="table table-hover">
+            <thead class="">
+            <tr>
+              <th>email</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-row" *ngFor="let tempEmail of emailsArray; index as num">
+              <td>{{tempEmail}}</td>
+              <td>
+                <mat-icon class="close" (click)="removeEmail(num)">close</mat-icon>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <form  #f="ngForm"  [formGroup]="contactForm">
+        <div class="row" style="margin-top:10px;">
+          <div class="col-12 col-sm-9 col-md-6 col-lg-4 outer">
+            <div class="contact-inner">
+              <div class="contact-outer">
+                <ngx-intl-tel-input [preferredCountries]="preferredCountries"
+                                    [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                                    [searchCountryField]="[SearchCountryField.Iso2,SearchCountryField.Name]"
+                                    [selectFirstCountry]="false"
+                                    [selectedCountryISO]="CountryISO.UnitedStates" [maxLength]=15 [phoneValidation]="true"
+                                    [separateDialCode]="separateDialCode" [numberFormat]="PhoneNumberFormat.National"
+                                    name="contact"
+                                    formControlName="contact">
+                </ngx-intl-tel-input>
+              </div>
+              <div class="contact-icon-outer">
+                <button id="addContactButton" mat-raised-button [disabled]="contactForm.get('contact')?.invalid"
+                        (click)="addContact()">
+                  <mat-icon>add_circle</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 outer">
+            <table class="table table-hover">
+              <thead class="">
+              <tr>
+                <th>Contact</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="table-row" *ngFor="let tempContact of contactArray; index as num">
+                <td>{{tempContact?.internationalNumber}}</td>
+                <td>
+                  <mat-icon class="close" (click)="removeContact(num)">close</mat-icon>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </form>
+      <div class="row" style="margin-top:10px;">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 outer">
+          <form [formGroup]="countryForm">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Country</mat-label>
+            <input  formControlName="country" matInput [matAutocomplete]="auto"/>
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let temp of filteredCountries" [value]="temp.name">
+                {{temp.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          </form>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 outer">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>City</mat-label>
+            <input formControlName="city" matInput type="text">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 outer">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Postal/Zip</mat-label>
+            <input formControlName="postal" matInput type="text">
+          </mat-form-field>
+        </div>
+        <div class="col-12 outer">
+          <mat-form-field hintLabel="Min 10 | Max 255 characters" class="full-width" appearance="outline">
+            <mat-label>Address</mat-label>
+            <textarea formControlName="address" matInput #inp maxlength="255" rows="5"></textarea>
+            <mat-hint align="end">{{inp.value?.length || 0}}/255</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 button-set-outer">
+      <div class="button-inner">
+        <button mat-raised-button color="primary" type="submit" [disabled]="FormDirective.invalid">Register</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!--
+<section>
+  <div class="wrapper">
+    <input type="checkbox" [(ngModel)]="separateDialCode">
+    <label>&nbsp;Separate Dial Code?</label>
+  </div>
+
+  <form #f="ngForm" [formGroup]="contactForm">
+    <div class="wrapper">
+      <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="preferredCountries"
+                          [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                          [searchCountryField]="[SearchCountryField.Iso2,SearchCountryField.Name]"
+                          [selectFirstCountry]="false"
+                          [selectedCountryISO]="CountryISO.India" [maxLength]=15 [phoneValidation]="true"
+                          [separateDialCode]="separateDialCode" [numberFormat]="PhoneNumberFormat.National"
+                          name="contact"
+                          formControlName="contact">
+      </ngx-intl-tel-input>
+      <div style="margin-top:20px; margin-bottom:10px;">
+        <small class="alert alert-danger"
+               *ngIf="!contactForm.controls['contact'].valid && contactForm.controls['contact'].touched">
+          <span *ngIf="contactForm.get('contact')?.invalid">
+            Phone number is required.
+          </span>
+        </small>
+      </div>
+    </div>
+    <div class="wrapper">
+      <button class="btn btn-success" (click)="f.reset()">Reset</button>
+    </div>
+  </form>
+  <div>
+    <strong>Form value:</strong>
+    <pre>{{ f.form.value | json }}</pre>
+  </div>
+  <div>
+    <strong>Form validation errors:</strong>
+    <pre>{{ f.form.controls['contact'].errors | json }}</pre>
+  </div>
+</section>-->

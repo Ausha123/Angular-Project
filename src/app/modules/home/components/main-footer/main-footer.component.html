@@ -1,0 +1,122 @@
+<div (click)="backToTop()" class="main-outer-back-to-top">
+  <p>Back to top</p>
+</div>
+<footer class="footer-section">
+  <div class="container">
+    <div class="footer-cta pt-5 pb-5">
+      <div class="row">
+        <div class="col-xl-4 col-md-4 mb-30">
+          <div class="single-cta">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="cta-text address">
+              <h4>Find us</h4>
+              <span>559/7, 1/2 Galle Road Panadura 12500</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-30">
+          <div class="single-cta">
+            <i class="fas fa-phone"></i>
+            <div class="cta-text" (click)="callCenter()">
+              <h4>Call us</h4>
+              <span>+94 71 308 6509</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-30">
+          <div class="single-cta">
+            <i class="far fa-envelope-open"></i>
+            <div class="cta-text" (click)="emailCenter()" >
+              <h4>Mail us</h4>
+              <span>info@edealers.lk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-content pt-5 pb-5">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 mb-50">
+          <div class="footer-widget">
+            <div class="footer-logo">
+              <a href="/"><img style="width: 150px" src="../../../../../assets/logo/logo%20white.png" class="img-fluid" alt="logo"></a>
+            </div>
+            <div class="footer-text">
+              <p>Are you stymied in the middle of a project? Do you have a dearth of knowledge in a particular field?
+                Are you looking for a high-quality product? You've arrived to the correct location.</p>
+            </div>
+            <div class="footer-social-icon">
+              <span>Follow us</span>
+              <a href="https://www.facebook.com/edealerslk/" target="_blank"><i class="fab fa-facebook-f facebook-bg"></i></a>
+              <a href="https://twitter.com/EdealersI" target="_blank"><i class="fab fa-twitter twitter-bg"></i></a>
+              <a href="https://www.linkedin.com/in/edealers-lk-0b637823a/" target="_blank"><i class="fab fa-linkedin-in linkedin-bg"></i></a>
+              <a href="https://www.youtube.com/channel/UCEPAuwKVNX9nO3A3xYXdHPg" target="_blank"><i class="fab fa-youtube youtube-bg"></i></a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Useful Links</h3>
+            </div>
+            <ul style="list-style: none">
+              <li><a routerLink="/home/system-development">System development</a></li>
+              <li><a routerLink="/home/make-money-with-us">Make money with us</a></li>
+              <li><a routerLink="/home/overview">Overview</a></li>
+              <li><a routerLink="/home/knowledge-center">Knowledge center</a></li>
+              <li><a routerLink="/home/what-do-we-do">What do we do</a></li>
+              <li><a routerLink="/home/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Subscribe</h3>
+            </div>
+            <div class="footer-text mb-25">
+              <p>Don’t miss to subscribe to our news feeds, kindly fill the form below.</p>
+            </div>
+            <div class="subscribe-form">
+              <form #formDirective="ngForm" [formGroup]="subscriberForm"
+                    (ngSubmit)="subscribeEmail(formDirective)">
+                <input formControlName="email" type="email" placeholder="Email Address">
+                <button type="submit" class="{{subscriberForm.invalid?'disabled':''}}"
+                        [disabled]="subscriberForm.invalid">
+                  <i class="fab fa-telegram-plane" *ngIf="mainButtonLoadingState"></i>
+                  <app-button-loading-spinner
+                    *ngIf="loadingService.mainButtonLoading | async"></app-button-loading-spinner>
+                </button>
+              </form>
+              <p class="alert alert-danger" style="margin-top: 3px" *ngIf="errorState">
+                {{errorMessage}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6  text-lg-left">
+          <div class="copyright-text">
+            <p>Copyright &copy; {{year}}.E-Dealers All Right Reserved</p>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6  d-lg-block text-right">
+          <div class="footer-menu">
+            <ul>
+              <li><a routerLink="/home">Home</a></li>
+              <li><a routerLink="/home/terms-conditions">Terms</a></li>
+              <li><a routerLink="/home/privacy-policy">Privacy Policy</a></li>
+              <li><a routerLink="/home/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

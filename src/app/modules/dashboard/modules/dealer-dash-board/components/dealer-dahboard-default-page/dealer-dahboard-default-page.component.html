@@ -1,0 +1,77 @@
+<div class="main-outer">
+  <div class="row">
+    <div class="col-12 main-inner">
+      <div class="button-outer">
+        <button mat-raised-button color="primary" (click)="makeNewInquiry()">Start New Project</button>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin: 0">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 main-inner">
+      <div class="inner-outer" routerLink="/dashboard/dealer/finance/revenue/source">
+        <div class="data-top-outer">
+          <h4 class="title">TOTAL REVENUE</h4>
+          <p class="point-text">
+            Previous month vs this month
+          </p>
+          <h1 class="count-text">$12500</h1>
+        </div>
+        <div class="data-top-bottom">
+          <h5 class="rate"><span class="rate-text">12%</span> increased</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 main-inner">
+      <div class="inner-outer" routerLink="/dashboard/dealer/daily-process/project-management/project-list">
+        <div class="data-top-outer">
+          <h4 class="title">ALL PROJECTS</h4>
+          <p class="point-text">
+            since register as a dealer
+          </p>
+          <h1 class="count-text">12</h1>
+        </div>
+        <div class="data-top-bottom">
+           <h5 class="rate"><span class="rate-text">12</span> Rejected</h5>
+           <h5 class="rate"><span class="rate-text">8</span> Complete</h5>
+           <h5 class="rate"><span class="rate-text">12</span> Pending</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 main-inner">
+      <div class="inner-outer" routerLink="/dashboard/dealer/finance/expenses/list">
+        <div class="data-top-outer">
+          <h4 class="title">TOTAL EXPENSES</h4>
+          <p class="point-text">
+            Previous month vs this month
+          </p>
+          <h1 class="count-text">$154</h1>
+        </div>
+        <div class="data-top-bottom">
+          <h5 class="rate"><span class="rate-text" style="color:#d35400 ">2%</span> increased</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 main-inner">
+      <div class="inner-outer" routerLink="/dashboard/dealer/human-resource/clients/list">
+        <div class="data-top-outer">
+          <h4 class="title">MY CLIENTS</h4>
+          <p class="point-text">
+            All Around the world
+          </p>
+          <h1 class="count-text">25</h1>
+        </div>
+        <div class="data-top-bottom">
+          <!--  <h5 class="rate"><span class="rate-text">55%</span> increased</h5>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin: 0">
+    <div class="col-12 col-md-6 col-lg-4 projects-on-going-outer">
+      <app-on-going-projects-data></app-on-going-projects-data>
+    </div>
+    <div class="col-12 col-md-6 col-lg-8 projects-on-going-outer">
+      <app-projects-server-cost></app-projects-server-cost>
+    </div>
+  </div>
+</div>

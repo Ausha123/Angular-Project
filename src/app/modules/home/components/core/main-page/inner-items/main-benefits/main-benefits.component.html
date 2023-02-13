@@ -1,0 +1,35 @@
+<div class="main-benefits-main-outer" data-aos="slide-up" data-aos-duration="2000" data-aos-once="true">
+  <div class="container">
+    <div class="top">
+      <div class="top-left">
+          <h2 class="top-left-text">
+            <span>Get</span> a taste of the  <br>
+            quickest way to earn <br>
+            <span>money</span>
+          </h2>
+      </div>
+      <div class="top-right">
+        <p class="top-right-text">Customers are more essential to us than everyone else who enters our premises, since they
+          are the ones who depend on us just as much as we are the ones who are reliant on them. So we always strive to
+          provide the best service possible.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <owl-carousel [carouselClasses]="['owl-theme', 'sliding']" [options]="myCarouselOptions">
+      <div *ngFor="let items of dataSet; let i = index">
+        <div class="content">
+          <div class="icon-outer">
+            <div class="icon-outer-inner">
+              <mat-icon class="icon">{{items.icon}}
+              </mat-icon>
+            </div>
+          </div>
+          <h2>{{items.title}}</h2>
+          <p>{{items.description}}</p>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+</div>

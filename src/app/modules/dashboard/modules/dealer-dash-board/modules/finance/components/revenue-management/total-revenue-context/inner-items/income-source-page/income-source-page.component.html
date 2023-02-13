@@ -1,0 +1,62 @@
+<div class="main-outer">
+  <div class="pending-invitations-tbl-outer">
+    <app-main-loading-bar *ngIf="loadingService.mainBarLoading | async"></app-main-loading-bar>
+    <div class="tbl-outer">
+      <div class="inner-outer">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <td><h4>#</h4></td>
+            <td><h4>Project Name</h4></td>
+            <td><h4>Platform</h4></td>
+            <td><h4>Estimated Cost</h4></td>
+            <td><h4>Ratio (25%)</h4></td>
+            <td><h4>Launched Date</h4></td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let tempData of sourceList; index as counter">
+            <td>
+              <p class="data-wrapper">
+                {{counter + 1}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.email}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.name}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.contact}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.country}}
+              </p>
+            </td>
+            <td>
+              <p class="data-wrapper">
+                {{tempData?.program_type}}
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <mat-paginator [length]=dataCount
+                 [pageSize]=pageSize
+                 [pageIndex]=page
+                 [pageSizeOptions]=pageSizeOptions
+                 (page)="pageEvent = getServerData($event)"
+                 aria-label="Select page">
+  </mat-paginator>
+</div>
